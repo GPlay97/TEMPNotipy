@@ -1,0 +1,6 @@
+
+{
+    "SENSOR": "28-yourID",
+    "INTERVAL": 60,
+    "RESTURL": "http://localhost:8000"
+}

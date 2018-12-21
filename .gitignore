@@ -3,3 +3,4 @@
 /app/package-lock.json
 /app/www/js/bundle.js
 /.vscode
+/pi/config.json
