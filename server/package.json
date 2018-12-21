@@ -1,0 +1,24 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server fr TEMPNotipy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GPlay97/TEMPNotipy.git"
+  },
+  "author": "GPlay97",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GPlay97/TEMPNotipy/issues"
+  },
+  "homepage": "https://github.com/GPlay97/TEMPNotipy#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.16.0"
+  }
+}
