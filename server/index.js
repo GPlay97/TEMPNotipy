@@ -16,8 +16,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 // apply default headers
-app.use((_, res, next) => {
+app.use((req, res, next) => {
     res.contentType('application/json');
+    res.setHeader('Access-Control-Allow-Origin', ((!req.get('origin') || req.get('origin') === 'null') ? '*' : req.get('origin')));
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
     next();
 });
 
