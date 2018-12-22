@@ -1,6 +1,6 @@
 import VueResource from 'vue-resource';
 import App from './../components/pages/App.vue';
-import DemoPage from './../components/pages/demo-page.vue';
+import HomePage from './../components/pages/Home.vue';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
@@ -11,7 +11,7 @@ Vue.http.options.credentials = true;
 var router = new VueRouter({
     routes: [{
         path: '/',
-        component: DemoPage
+        component: HomePage
     }]
 });
 
@@ -25,7 +25,7 @@ var vm = new Vue({
     },
     components: {
         'app': App,
-        'login-page': DemoPage
+        'home': HomePage
     },
     router,
     render: function(h) {
