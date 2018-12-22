@@ -28,6 +28,23 @@ const postTemperature = (temperature, callback) => {
 
 module.exports = {
     /**
+     * Retrieves the last submitted temperature and timestamp
+     * @param {Object} _ unused
+     * @param {Object} res the server response
+     */
+    getTemperature: (_, res) => {
+        db.query('SELECT temperature, timestamp FROM temperature', [], (err, queryRes) => {
+            if (!err && queryRes) {
+                res.json(queryRes[0]);
+            } else {
+                res.status(422).json({
+                    error: err
+                });
+            }
+        });
+    },
+    /**
+     * Saves the given temperature in database
      * @param {Object} req the server request
      * @param {Object} res the server response
      */

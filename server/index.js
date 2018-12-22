@@ -21,6 +21,9 @@ app.use((_, res, next) => {
     next();
 });
 
+// the routes
+app.get('/temperature', temperature.getTemperature);
 app.post('/temperature', temperature.postTemperature);
 
+// start server
 app.listen(config.PORT, () => console.log('Server started on port ' + config.PORT));
